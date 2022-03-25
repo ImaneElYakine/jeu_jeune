@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Jeu</title>
+  <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+  />
+  <!-- Link Swiper's CSS -->
+  <link
+          rel="stylesheet"
+          href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+
+  <link rel="stylesheet" href="style/mobile.css">
+
+
+</head>
+
+<body>
+
+<!-- Fond immobile -->
+<div id="background">
+  <img id="corner1" src="img/background_corner.svg">
+  <img id="corner2" src="img/background_corner.svg">
+  <img id="coquillage" src="img/coquillage.svg">
+  <img id="parasol" src="img/parasol.svg">
+  <img id="serviette" src="img/serviette.svg">
+  <img id="pas1" src="img/pas.svg">
+  <img id="pas2" src="img/pas.svg">
+</div>
+
+<!-- Animation réponses -->
+<div id="reponse_fausse">C'EST RATE</div>
+<div id="reponse_bonne">BIEN JOUE</div>
+
+
+<!-- Bar de progrès -->
+<div id="progress" class="progress">
+  <div class="bar" style="width:35%"></div>
+</div>
+
+<!-- Swiper-->
+<div id="cartes" class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div id="debut" class="swiper-slide"></div>
+    <div id="question1" class="swiper-slide"></div>
+    <div id="question2" class="swiper-slide"></div>
+    <div id="question3" class="swiper-slide"></div>
+    <div id="question4" class="swiper-slide"></div>
+    <div id="question5" class="swiper-slide"></div>
+    <div id="fin" class="swiper-slide"></div>
+
+    <!-- Position -->
+    <div id="position">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+    <!-- Choix -->
+    <div id="choix_reponse">
+      <input class="pouce_gauche"  type="image" src="img/picto_faux.svg" onclick="reponseFausseAffichage()">
+      <input class="pouce_droit"  type="image" src="img/picto_vrai.svg" onclick="reponseBonneAffichage()">
+
+    </div>
+  </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/affichages.js"></script>
+<script src="js/fonctions_jeu.js"></script>
+</body>
+</html>
