@@ -1,0 +1,290 @@
+@media only screen and (min-width: 575.98px) {
+    body {
+        margin: 0;
+        background-color: #FFE766;
+    }
+
+    /* FOND IMMOBILE */
+    #corner1 {
+        height: 100vh;
+        width: auto;
+        position: fixed;
+        left: -20vw;
+        top: -25vh;
+    }
+
+    #corner2 {
+        height: 100vh;
+        width: auto;
+        position: fixed;
+        right: -20vw;
+        bottom: -30vh;
+        transform: rotate(190deg);
+    }
+
+    #coquillage {
+        position: fixed;
+        top: 25vh;
+        left: 10vw;
+        width: 5vh;
+        height: auto;
+    }
+
+    #parasol {
+        position: fixed;
+        top: 25vh;
+        right: 15vw;
+        width: 30vh;
+        height: auto;
+    }
+
+    #serviette {
+        position: fixed;
+        top: 55vh;
+        left: 10vw;
+        width: 30vh;
+        height: auto;
+    }
+
+    #pas1 {
+        position: fixed;
+        top: 15vh;
+        right: 30vw;
+        width: 15vh;
+        height: auto;
+    }
+
+    #pas2 {
+        position: fixed;
+        top: 80vh;
+        left: 20vw;
+        width: 15vh;
+        height: auto;
+    }
+
+    /* PRESENTATION */
+    #presentation {
+        visibility: visible;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 10vh;
+        text-align: center;
+        font-family: "Mediametrie", sans-serif;
+    }
+
+    /* 1ERE CONNEXION */
+    #premiere_connexion {
+        visibility: hidden;
+    }
+
+    #encart_premiere_connexion {
+        background-color: white;
+        text-align: center;
+        font-family: "Mediametrie", sans-serif;
+    }
+
+    #bouton_premiere_connexion {
+
+    }
+
+    #lot_cadeaux {
+
+        width: 60vw;
+        height: auto;
+    }
+
+    #texte_premiere_connexion_1 {
+        padding: 2vh;
+        font-size: 2vh;
+    }
+
+    #texte_premiere_connexion_2 {
+        padding: 2vh;
+        font-size: 2vh;
+
+    }
+
+
+    /* ACCUEIL */
+    #accueil {
+        visibility: hidden;
+    }
+
+    #picto_cadeau {
+        position: absolute;
+        top: 3vh;
+        left: 3vw;
+        width: 7vh;
+        height: auto;
+    }
+
+    #picto_info {
+        position: absolute;
+        top: 3vh;
+        right: 3vw;
+        width: 7vh;
+        height: auto;
+    }
+
+    #points {
+        display: inline;
+        position: absolute;
+        left: 50%;
+        top: 59%;
+        transform: translate(-50%, -59%);
+        font-weight: bold;
+        font-family: "Mediametrie", sans-serif;
+        font-size: 4vh;
+    }
+
+    #picto_point {
+        width: 4vh;
+        height: auto;
+    }
+
+    #avatar {
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%, -30%);
+        width: 25vh;
+        height: auto;
+    }
+
+    #pseudo {
+        position: absolute;
+        font-family: "Mediametrie", sans-serif;
+        font-weight: bold;
+        font-size: 4vh;
+        left: 50%;
+        top: 53%;
+        transform: translate(-50%, -53%);
+    }
+
+
+    #bouton_jouer {
+        font-weight: bold;
+        font-family: "Mediametrie", sans-serif;
+        font-size: 4vh;
+        position: absolute;
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, -80%);
+    }
+
+    #logo {
+        height: 10vh;
+        width: auto;
+        position: absolute;
+        left: 50%;
+        top: 2%;
+        transform: translate(-50%, -2%);
+    }
+
+    #bouton_classement {
+        font-weight: bold;
+        font-family: "Mediametrie", sans-serif;
+        font-size: 4vh;
+        position: absolute;
+        left: 50%;
+        top: 90%;
+        transform: translate(-50%, -90%);
+    }
+
+    .boutons_accueil {
+        background-color: white;
+        border: none;
+        width: 25vw;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    /* INFORMATIONS */
+    #informations {
+        visibility: hidden;
+    }
+
+    #picto_retour_informations {
+        position: absolute;
+        top: 3vh;
+        left: 3vw;
+        width: 7vh;
+        height: auto;
+    }
+
+    .encart {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -60%);
+        width: 80vw;
+        height: 80vh;
+    }
+
+    #encart_informations {
+        background-color: #14A8C6;
+    }
+
+    /* CADEAUX */
+    #cadeaux {
+        visibility: hidden;
+    }
+
+    #picto_retour_cadeaux {
+        position: absolute;
+        top: 3vh;
+        left: 3vw;
+        width: 7vh;
+        height: auto;
+    }
+
+    #encart_cadeaux {
+        background-color: #14A8C6;
+    }
+
+    /* CLASSEMENT */
+    #classement {
+        visibility: hidden;
+    }
+
+    #picto_retour_classement {
+        position: absolute;
+        top: 3vh;
+        left: 3vw;
+        width: 7vh;
+        height: auto;
+    }
+
+    #encart_classement {
+        background-color: white;
+    }
+
+    /* REGLES JEU */
+
+    #regles_jeu {
+        visibility: hidden;
+    }
+
+    #encart_regles_jeu {
+        background-color: white;
+    }
+
+    /* COMPTE REBOURS */
+
+    #compte_rebours {
+        visibility: hidden;
+        position: absolute;
+        font-size: 20vh;
+        font-family: "Mediametrie", sans-serif;
+        font-weight: bold;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
