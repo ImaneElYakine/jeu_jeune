@@ -270,10 +270,14 @@
         left: 3vw;
         width: 7vh;
         height: auto;
+        z-index: 1;
     }
 
     #encart_cadeaux {
+        position: absolute;
         background-color: #14A8C6;
+        width: 100vw;
+        height: 100vh;
     }
 
     /* CLASSEMENT */
@@ -490,6 +494,16 @@
     .pouce_droit {
         float:right;
         height: 9vh;
+    }
+
+    #liste_cadeaux {
+        font-size: 2vh;
+        list-style-type: none;
+    }
+
+    .photo_cadeau {
+        height: 15vh;
+        width: auto;
     }
 
 
