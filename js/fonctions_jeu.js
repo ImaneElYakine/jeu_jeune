@@ -22,6 +22,15 @@ const themes = [
     "Cinéma"
 ];
 
+// Tableau des réponses aux questions
+const reponses = [
+    false,
+    true,
+    false,
+    true,
+    false
+];
+
 // Affichage des questions sur les cartes
 for (let i = 1; i <= totalQuestion+1; i++) {
     const carte = document.getElementById("question"+i.toString());
@@ -37,45 +46,29 @@ var swiper = new Swiper(".mySwiper", {
     noSwipingClass: "disabled",
     initialSlide : 1,
     resistance: false
-
 });
+var clique = false;
+let current = swiper.realIndex;
+let direction = swiper.previousIndex;
+swiper.slideTo(3);
 swiper.on('realIndexChange', function () {
-    let current = swiper.realIndex;
-    let direction = swiper.previousIndex;
+    clique = false;
+    // A revoir
     if(current > direction) {
-        if(currentQuestion <= totalQuestion) {
-            // on affiche l'animation
-            reponseFausseAffichage();
-            // on supprime la slide d'avant
-            if(direction !==0) {
-                //swiper.removeSlide(direction);
-            }
-            console.log(current + " " + direction);
-            // on dévoile la slide suivante
-            currentQuestion++;
-        }
+        reponseFausseAffichage();
     }
 
     if(current < direction) {
-        if(currentQuestion <= totalQuestion) {
-            // on affiche l'animation
-            reponseBonneAffichage();
-            // on supprime la slide d'avant
-            if(direction !==0) {
-                //swiper.removeSlide(direction);
-            }
-            // on dévoile la slide suivante
-            currentQuestion++;
-        }
+        reponseBonneAffichage();
     }
 });
 
+console.log(document.getElementById("pouce_gauche"));
 // Choix de la réponse par le clique
-document.getElementById("choix_faux").onclick = function () {
-// on passe à la slide suivante
+document.getElementById("pouce_gauche").onclick = function () {
+
 }
 document.getElementById("choix_vrai").onclick = function () {
 
 }
-
 

@@ -1,4 +1,9 @@
 setTimeout(affichePremiereConnexion, 1000);
+var cadeaux = [
+    "Iphone 13",
+    "Abonnement Premium Spotify",
+    "Planche de skateboard"
+]
 
 // Affichage la page 1ère connexion
 function affichePremiereConnexion(){
@@ -34,6 +39,8 @@ function afficheClassement(){
 function afficheCadeaux(){
     document.getElementById("accueil").style.visibility = "hidden";
     document.getElementById("cadeaux").style.visibility = "visible";
+    // Liste des cadeaux
+
 }
 
 // Affichage des règles avant le jeu (pour une 1ère connexion)
@@ -74,13 +81,17 @@ function reponseFausseAffichage(){
     document.getElementById("cartes").style.filter = "blur(4px)";
     document.getElementById("progress").style.filter = "blur(4px)";
     document.getElementById("reponse_fausse").style.visibility = "visible";
-    // à rajouter : unable bouton + swiper
+    document.getElementById("choix_reponse").style.visibility = "hidden";
+
+
     setTimeout(function (){
+        // désactiver temporairement les boutons
         document.getElementById("background").style.filter = "none";
         document.getElementById("cartes").style.filter = "none";
         document.getElementById("progress").style.filter = "none";
         document.getElementById("reponse_fausse").style.visibility = "hidden";
-    }, 3000);
+        document.getElementById("choix_reponse").style.visibility = "visible";
+    }, 2000);
     // on passe à la slide suivante
 }
 
@@ -89,12 +100,16 @@ function reponseBonneAffichage(){
     document.getElementById("cartes").style.filter = "blur(4px)";
     document.getElementById("progress").style.filter = "blur(4px)";
     document.getElementById("reponse_bonne").style.visibility = "visible";
+    document.getElementById("choix_reponse").style.visibility = "hidden";
+
     setTimeout(function (){
+        // désactiver temporairement les boutons
         document.getElementById("background").style.filter = "none";
         document.getElementById("cartes").style.filter = "none";
         document.getElementById("progress").style.filter = "none";
         document.getElementById("reponse_bonne").style.visibility = "hidden";
-    }, 3000);
+        document.getElementById("choix_reponse").style.visibility = "visible";
+    }, 1000);
     // on passe à la slide suivante
 
 }
