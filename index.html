@@ -24,9 +24,8 @@
 </div>
 
 <!-- Page de présentation avec titre, disparait pour laisser la page d'accueil -->
-<div id="presentation">
-    Le quizz<br> de<br> l'été
-</div>
+<img id="titre1" src="img/titre_quiz_1.svg">
+<img id="titre2" src="img/titre_quiz_2.svg">
 
 <!-- Page de 1ère connexion -->
 <div id="premiere_connexion">
@@ -37,7 +36,6 @@
         <p id="texte_premiere_connexion_2">Chaque question possède une thématique, un niveau et un nombre de points.
             Plus tu trouves de bonnes réponses, plus tu gagnes de points ! </p>
         <button id="bouton_premiere_connexion" onclick="afficheAccueil()">C'est parti</button>
-
     </div>
 </div>
 
@@ -49,10 +47,10 @@
         <img id="picto_info" onclick="afficheInformations()" src="img/picto_info.svg"/>
     </div>
     <div id="profil">
-        <img id="avatar" src="img/avatars/2.svg"/>
+        <img id="avatar" src="img/avatars/1.svg"/>
         <span id="pseudo">Surfeur Zen 3</span>
         <div id="points">
-            <span id="nombre_point">142</span>
+            <span id="nombre_point">0</span>
             <img id="picto_point" src="img/picto_point.svg"/>
         </div>
     </div>
@@ -111,23 +109,87 @@
     <div class="encart" id="encart_classement">
         <p id="titre_classement">Classement</p>
         <object class="svgClass" data="podium.svg" id="podium" type="image/svg+xml"></object>
+            <table style="border-collapse: collapse; " id="top10">
+                <tbody>
+                <tr id="attribut_classement" class="bottom_line">
+                    <td>Rang</td><td>Nom</td><td><img src="img/picto_point.svg"></td>
+                </tr>
+                <tr id="top4" class="bottom_line">
+                    <td>4</td><td>Joueur Zen 3</td><td>745</td>
+                </tr>
+                <tr id="top5" class="bottom_line">
+                    <td>5</td><td>Joueur Zen 3</td><td>745</td>
+                </tr>
+                <tr id="top6" class="bottom_line">
+                    <td>6</td><td>Joueur Zen 3</td><td>745</td>
+                </tr>
+                <tr id="top7" class="bottom_line">
+                    <td>7</td><td>Joueur Zen 3</td><td>745</td>
+                </tr>
+                <tr id="top8" class="bottom_line">
+                    <td>8</td><td>Joueur Zen 3</td><td>745</td>
+                </tr>
+                </tbody>
+                <span id="ton_rang">Ton rang</span>
+                <table style="border-collapse: collapse;" id="top_joueur">
+                    <tbody>
+                    <tr id="top_joueur_rang">
+                        <td>180</td><td>Joueur Zen 3</td><td>745</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </table></li>
     </div>
 </div>
 
 <!-- Page Règles du jeu -->
 <div id="regles_jeu">
-    <div class="encart" id="encart_regles_jeu">
-        <button id="bouton_regles_jeu" onclick="window.location.href='jeu.html'">J'ai compris</button>
+    <div class="encart" id="encart_regles_jeu_3">
+        <p class="texte-regles">Découvre ton score et le classement général à la fin de chaque partie.</p>
+        <p class="texte-regles textes-regles-bonus">Bonus : tu gagnes un point par jour de connexion.</p>
+        <input class="fleche_precedente"  type="image" src="img/flèche_précédente.svg" onclick="pageReglesDeux();" alt="">
+        <button id="bouton_regles_jeu" onclick="compteRebours()">J'ai compris</button>
+        <div class="position_règles">
+            <div class="dot_regle"></div>
+            <div class="dot_regle"></div>
+            <div class="dot_regle active"></div>
+        </div>
+    </div>
+    <div class="encart" id="encart_regles_jeu_2">
+        <p class="texte-regles"> Chaque question possède un niveau & un nombre de points. Plus tu trouves de bonnes réponses, plus tu gagnes de points !</p>
+        <span class="texte-regles plus_3_points">+3</span>
+        <p class="texte-regles" style="font-weight: bold;"> Attention !</p>
+        <p class="texte-regles">Si tu reviens en arrière ou quittes la partie en cours de jeu, tu ne gagneras aucun point pour cette journée.</p>
+        <div class="position_règles">
+            <div class="dot_regle"></div>
+            <div class="dot_regle active"></div>
+            <div class="dot_regle"></div>
+        </div>
+        <input class="fleche_precedente"  type="image" src="img/flèche_précédente.svg" onclick="pageReglesUne();" alt="">
+        <input class="fleche_suivante"  type="image" src="img/flèche_suivante.svg" onclick="pageReglesTrois();" alt="">
+    </div>
+    <div class="encart" id="encart_regles_jeu_1">
+        <p class="texte-regles" style="font-weight: bold;">Pour jouer, c'est simple !</p>
+        <p class="texte-regles">Si tu penses que la réponse est vraie, clique sur le pouce vert.</p>
+        <img class="pouce_regles" src="img/picto_vrai.svg">
+        <p class="texte-regles">Si tu penses que la réponse est fausse, clique sur le pouce rouge.</p>
+        <img class="pouce_regles" src="img/picto_faux.svg">
+        <div class="position_règles">
+            <div class="dot_regle active"></div>
+            <div class="dot_regle"></div>
+            <div class="dot_regle"></div>
+        </div>
+        <input class="fleche_suivante"  type="image" src="img/flèche_suivante.svg" onclick="pageReglesDeux();" alt="">
     </div>
 </div>
 
 <!-- Compte à rebours avant le jeu -->
-<div id="compte_rebours">
-    <div id="compte_rebours_3"></div>
-    <div id="compte_rebours_2"></div>
-    <div id="compte_rebours_1"></div>
-    <div id="compte_rebours_go"></div>
-</div>
+
+<div class="compte_rebours" id="compte_rebours_3">3</div>
+<div class="compte_rebours" id="compte_rebours_2">2</div>
+<div class="compte_rebours" id="compte_rebours_1">1</div>
+<div class="compte_rebours" id="compte_rebours_go">GO</div>
+
 
 </div>
 </div>
@@ -135,6 +197,7 @@
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/affichages.js"></script>
-<script src="js/fonctions_jeu.js"></script>
+<script src="js/fonctions_jeu_v1.js"></script>
+<script src="js/affichages_v1.js"></script>
 </body>
 </html>
