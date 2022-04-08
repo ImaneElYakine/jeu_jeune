@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Jeu d'été 2022</title>
+    <link href="img/favicon_mediametrie.png" rel="icon">
+    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/portrait.css">
+    <link rel="stylesheet" href="style/paysage.css">
+</head>
+<body>
+<script src="js/affichage.js"></script>
+
+<!-- Fond immobile -->
+<div id="background">
+    <img id="corner1" src="img/background_corner.svg">
+    <img id="corner2" src="img/background_corner.svg">
+    <img id="coquillage" src="img/coquillage.svg">
+    <img id="parasol" src="img/parasol.svg">
+    <img id="serviette" src="img/serviette.svg">
+    <img id="pas1" src="img/pas.svg">
+    <img id="pas2" src="img/pas.svg">
+</div>
+
+<!-- Page Règles du jeu -->
+<div id="regles_jeu">
+    <div class="encart" id="encart_regles_jeu_3">
+        <p class="texte-regles">Découvre ton score et le classement général à la fin de chaque partie.</p>
+        <p class="texte-regles textes-regles-bonus">Bonus : tu gagnes un point par jour de connexion.</p>
+        <input class="fleche_precedente"  type="image" src="img/flèche_précédente.svg" onclick="pageReglesDeux();" alt="">
+        <button id="bouton_regles_jeu" onclick="window.location.href = 'timer.html';">J'ai compris</button>
+        <div class="position_règles">
+            <div class="dot_regle"></div>
+            <div class="dot_regle"></div>
+            <div class="dot_regle active"></div>
+        </div>
+    </div>
+    <div class="encart" id="encart_regles_jeu_2">
+        <p class="texte-regles"> Chaque question possède un niveau & un nombre de points. Plus tu trouves de bonnes réponses, plus tu gagnes de points !</p>
+        <span class="texte-regles plus_3_points">+3</span>
+        <p class="texte-regles" style="font-weight: bold;"> Attention !</p>
+        <p class="texte-regles">Si tu reviens en arrière ou quittes la partie en cours de jeu, tu ne gagneras aucun point pour cette journée.</p>
+        <div class="position_règles">
+            <div class="dot_regle"></div>
+            <div class="dot_regle active"></div>
+            <div class="dot_regle"></div>
+        </div>
+        <input class="fleche_precedente"  type="image" src="img/flèche_précédente.svg" onclick="pageReglesUne();" alt="">
+        <input class="fleche_suivante"  type="image" src="img/flèche_suivante.svg" onclick="pageReglesTrois();" alt="">
+    </div>
+    <div class="encart" id="encart_regles_jeu_1">
+        <p class="texte-regles" style="font-weight: bold;">Pour jouer, c'est simple !</p>
+        <p class="texte-regles">Si tu penses que la réponse est vraie, clique sur le pouce vert.</p>
+        <img class="pouce_regles" src="img/picto_vrai.svg">
+        <p class="texte-regles">Si tu penses que la réponse est fausse, clique sur le pouce rouge.</p>
+        <img class="pouce_regles" src="img/picto_faux.svg">
+        <div class="position_règles">
+            <div class="dot_regle active"></div>
+            <div class="dot_regle"></div>
+            <div class="dot_regle"></div>
+        </div>
+        <input class="fleche_suivante"  type="image" src="img/flèche_suivante.svg" onclick="pageReglesDeux();" alt="">
+    </div>
+</div>
+</div>
+</div>
+
+<!-- JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/affichage.js"></script>
+<script src="js/fonctions_jeu.js"></script>
+
+</body>
+</html>
