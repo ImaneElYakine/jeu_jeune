@@ -1,8 +1,18 @@
-setTimeout(affichePremiereConnexion, 1500);
+setTimeout(affichePremiereConnexionUne, 3000);
+const son_fond = new Audio('son/plage.mp3');
+son_fond.loop = true;
 
-// Affichage la page d'introduction
-function affichePremiereConnexion() {
-    document.getElementById("premiere_connexion").style.visibility = "visible";
+// Affichage la page d'introduction 1
+function affichePremiereConnexionUne() {
+    document.getElementById("premiere_connexion_une").style.visibility = "visible";
+    document.getElementById("titre1").style.visibility = "hidden";
+    document.getElementById("titre2").style.visibility = "hidden";
+}
+
+// Affichage la page d'introduction 2
+function affichePremiereConnexionDeux() {
+    document.getElementById("premiere_connexion_une").style.visibility = "hidden";
+    document.getElementById("premiere_connexion_deux").style.visibility = "visible";
     document.getElementById("titre1").style.visibility = "hidden";
     document.getElementById("titre2").style.visibility = "hidden";
 }
@@ -12,10 +22,26 @@ function afficheAccueil(){
     window.location.href = 'accueil.html';
 }
 
-// Affichage la page des informations
+// Affichage de la page des informations
 function afficheInformations(){
     document.getElementById("accueil").style.visibility = "hidden";
     document.getElementById("informations").style.visibility = "visible";
+}
+
+// Affichage de la pop up points
+function affichePopupPoints(){
+    document.getElementById("popup_points").style.visibility = "visible";
+}
+
+// Affichage de la pop up déjà joué
+function affichePopupDejaJoue(){
+    document.getElementById("deja_joué").style.visibility = "visible";
+}
+
+// Fermeture de la pop up points
+function fermeturePopup(){
+    document.getElementById("popup_points").style.visibility = "hidden";
+    document.getElementById("deja_joué").style.visibility = "hidden";
 }
 
 // Affichage du classement
@@ -88,9 +114,9 @@ function reponseFausseAffichage(){
     document.getElementById("reponse_fausse").style.animation = 'none';
     document.getElementById("reponse_fausse").offsetHeight;
     document.getElementById("reponse_fausse").style.animation = null;
-    //document.getElementById("reponse_fausse").style.animation = "scale-up-center 1.5s";
     document.getElementById("reponse_fausse").style.visibility = "visible";
     document.getElementById("choix_reponse").style.visibility = "hidden";
+    document.getElementById("cartes").style.filter = "blur(4px)";
 
     setTimeout(function (){
         document.getElementById("background").style.filter = "none";
@@ -110,10 +136,9 @@ function reponseBonneAffichage(){
     document.getElementById("reponse_bonne").style.animation = 'none';
     document.getElementById("reponse_bonne").offsetHeight;
     document.getElementById("reponse_bonne").style.animation = null;
-    //document.getElementById("reponse_bonne").style.animation = "scale-up-center 1.5s";
     document.getElementById("reponse_bonne").style.visibility = "visible";
     document.getElementById("choix_reponse").style.visibility = "hidden";
-
+    document.getElementById("cartes").style.filter = "blur(4px)";
     setTimeout(function (){
         document.getElementById("background").style.filter = "none";
         document.getElementById("cartes").style.filter = "none";
@@ -129,14 +154,19 @@ function reponseBonneAffichage(){
 // Affichage lors de la fin du jeu
 const affichageFinJeu = function affichageFinJeu() {
     setTimeout(function () {
-        //document.getElementById("background").style.filter = "blur(4px)";
-        document.getElementById("cartes").style.visibility = "hidden";
-        document.getElementById("progress").style.visibility = "hidden";
-        document.getElementById("positionnement").style.visibility = "hidden";
-        document.getElementById("fin_jeu").style.visibility = "visible";
-        document.getElementById("choix_reponse").style.visibility = "hidden";
-        setTimeout(function () {
             window.location.replace('./accueil.html');
-        }, 3000);
-    }, 1500);
+        }, 1500);
 };
+
+// Son de fond
+function sonFond(){
+    console.log(son_fond.paused);
+    if (son_fond.paused === true) {
+        document.getElementById("picto_son").src = "img/picto_son.svg";
+        son_fond.play();
+    }
+    else if (son_fond.paused === false){
+        document.getElementById("picto_son").src = "img/picto_muet.svg";
+        son_fond.pause();
+    }
+}

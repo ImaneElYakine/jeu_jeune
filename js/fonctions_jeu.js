@@ -51,7 +51,9 @@ let timer;
 
 // Affichage de la question sur la carte
 const question = document.getElementById("question");
-question.innerHTML= themes[0] + "<br>" + questions[0];
+const info_question = document.getElementById("info_question");
+info_question.innerHTML= themes[0] + " - " + points[0] + "pts";
+question.innerHTML= questions[0];
 
 // INITIALISATION DU SWIPER
 const swiper = new Swiper(".mySwiper", {
@@ -70,9 +72,9 @@ function questionSuivante(){
     currentQuestion++;
     if(currentQuestion >= totalQuestion){
         affichageFinJeu();
-        console.log(pointsTotal);
     } else {
-        question.innerHTML= themes[currentQuestion] + "<br>" + questions[currentQuestion];
+        info_question.innerHTML= themes[currentQuestion] + " - " + points[currentQuestion] + "pts";
+        question.innerHTML= questions[currentQuestion];
         document.getElementById("dot"+currentQuestion).classList.add("active");
     }
 }
@@ -112,7 +114,7 @@ function eventClique(choix){
 function stopTimer(){
     clearTimeout(timer);
     document.getElementById("progress_bar").style.animation = 'none';
-    document.getElementById("progress_bar").offsetHeight; /* trigger reflow */
+    document.getElementById("progress_bar").offsetHeight;
     document.getElementById("progress_bar").style.animation = null;
     console.log("stop");
 }
@@ -120,10 +122,10 @@ function stopTimer(){
 // DEBUT DU TIMER
 function runTimer(){
     document.getElementById("progress_bar").style.animation = 'none';
-    document.getElementById("progress_bar").offsetHeight; /* trigger reflow */
+    document.getElementById("progress_bar").offsetHeight;
     document.getElementById("progress_bar").style.animation = null;
-    document.getElementById("progress_bar").style.animation = "progress 5s linear";
+    document.getElementById("progress_bar").style.animation = "progress 6s linear";
     timer = window.setTimeout(function (){
         reponseFausseAffichage();
-    }, 5000);
+    }, 6000);
 }
