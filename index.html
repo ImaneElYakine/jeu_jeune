@@ -8,6 +8,7 @@
     <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
     <link href="style/portrait.css" rel="stylesheet">
     <link rel="stylesheet" href="style/paysage.css">
+    <link rel="stylesheet" href="style/animations.css">
 
 </head>
 <body>
@@ -24,18 +25,28 @@
 </div>
 
 <!-- Page de présentation avec titre, disparait pour laisser la page d'accueil -->
-<img id="titre1" src="img/titre_quiz_1.svg">
-<img id="titre2" src="img/titre_quiz_2.svg">
+<img id="titre1" src="img/titre_quiz_1.png">
+<img id="titre2" src="img/titre_quiz_2.png">
 
 <!-- Page de 1ère connexion -->
-<div id="premiere_connexion">
-    <div class="encart" id="encart_premiere_connexion">
-        <p id="texte_premiere_connexion_1">Teste ta culture générale et tente de gagner des cadeaux grâce au quiz de
+<div id="premiere_connexion_une">
+    <div class="encart_premiere_connexion encart">
+        <p class="texte_premiere_connexion">Teste ta culture générale et tente de gagner des cadeaux grâce au quiz de
             l’été Médiamétrie.</p>
         <img id="lot_cadeaux" src="img/lot_cadeaux.svg">
-        <p id="texte_premiere_connexion_2">Chaque question possède une thématique, un niveau et un nombre de points.
+        <p class="texte_premiere_connexion">Chaque question possède une thématique, un niveau et un nombre de points.
             Plus tu trouves de bonnes réponses, plus tu gagnes de points ! </p>
-        <button id="bouton_premiere_connexion" onclick="afficheAccueil()">C'est parti</button>
+        <button class="bouton_premiere_connexion" onclick="affichePremiereConnexionDeux()">Suivant</button>
+    </div>
+</div>
+
+<div id="premiere_connexion_deux">
+    <div class="encart_premiere_connexion encart">
+        <p class="texte_premiere_connexion">En participant au jeu, nous vous informons que Médiamétrie vous attribue un pseudo et un avatar aléatoires dès votre première connexion</p>
+        <img style="width: 10vh" src="img/avatars/2.svg">
+        <p style="font-weight: bold" class="texte_premiere_connexion">Surfeur Zen 3</p>
+        <p style="color: #FF2144" class="texte_premiere_connexion">En poursuivant votre navigation, nous vous informons que des données d’usage nécessaires au bon fonctionnement du jeu auquel vous participez sont collectées. </p>
+        <button class="bouton_premiere_connexion" onclick="afficheAccueil()">C'est parti</button>
     </div>
 </div>
 

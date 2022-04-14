@@ -25,7 +25,7 @@
 <!-- Acceuil -->
 <div id="accueil">
     <div id="header">
-        <img id="logo" src="img/logo_mediametrie.png"/>
+        <a href="https://www.mediametrie.fr/fr" target="_blank"><img id="logo" src="img/logo_mediametrie.png"/></a>
         <img id="picto_cadeau" onclick="afficheCadeaux()" src="img/picto_cadeau.svg"/>
         <img id="picto_info" onclick="afficheInformations()" src="img/picto_info.svg"/>
     </div>
@@ -34,17 +34,37 @@
         <span id="pseudo">Surfeur Zen 3</span>
         <div id="points">
             <span id="nombre_point">0</span>
-            <img id="picto_point" src="img/picto_point.svg"/>
+            <img onclick="affichePopupPoints()" id="picto_point" src="img/picto_point.svg"/>
         </div>
     </div>
     <button class="boutons_accueil" id="bouton_jouer" onclick="window.location.href='règles.html'">Jouer</button>
     <button class="boutons_accueil" id="bouton_classement" onclick="afficheClassement()">Classement</button>
+    <img id="picto_son" onclick="sonFond()" src="img/picto_muet.svg"/>
+</div>
+
+<!-- Déjà joué -->
+<div id="deja_joué">
+    <span onclick="fermeturePopup()" class="popup_croix">x</span>
+    <p id="texte_déjà_joué">Tu as déjà joué aujourd'hui, reviens demain !</p>
+    <img id="img_déjà_joué" src="img/déjà_joué.png">
+</div>
+
+<!-- Popup points -->
+<div id="popup_points">
+    <span onclick="fermeturePopup()" class="popup_croix">x</span>
+    <p id="popup_points_texte">Rentre le code reçu dans ton Infopanel de juin et gagne <b>5 points</b> !</p>
+    <img src="img/points_popup.svg" id="img_popup_points">
+    <form>
+        <input type="text" id="input_points" placeholder="Ton code">
+        <input type="submit" value="Valider" id="bouton_popup_points">
+    </form>
 </div>
 
 <!-- Page Informations -->
 <div id="informations">
     <img id="picto_retour_informations" onclick="afficheAccueil()" src="img/picto_retour.svg"/>
     <div class="encart" id="encart_informations">
+        <p id="titre_règles">Règles du quiz</p>
         <p id="texte_informations_1">Chaque question possède une thématique, un niveau et un nombre de points. Plus tu
             trouves de bonnes réponses, plus tu gagnes de points ! </p>
         <p id="texte_informations_2">Attention ! Si tu reviens en arrière ou quittes la partie en cours de jeu, tu ne
@@ -109,6 +129,7 @@
 <div id="cadeaux">
     <img id="picto_retour_cadeaux" onclick="afficheAccueil()" src="img/picto_retour.svg"/>
     <div class="encart" id="encart_cadeaux">
+        <p id="titre_cadeaux">Cadeaux</p>
         <ul id="liste_cadeaux">
             <li class="cadeau" id="cadeau1">
                 <table>
