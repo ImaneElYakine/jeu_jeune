@@ -693,6 +693,7 @@
         top: 50%;
         transform: translate(-50%, -50%);
         background-color: white;
+        text-align: center;
     }
 
     .swiper-slide {
@@ -708,14 +709,10 @@
 
     #info_question {
         font-weight: bold;
-        font-size: 2.25vh;
+        font-size: 2vh;
         text-decoration: underline;
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, -20%);
+        margin-top: 5vh;
     }
-
 
 
     #positionnement {
