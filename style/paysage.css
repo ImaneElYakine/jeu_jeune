@@ -77,50 +77,51 @@
 
     /* PRESENTAION */
     #titre1, #titre2 {
-        width: 40vh;
+        width: 40vw;
         position: absolute;
     }
 
     #titre1 {
         left: 50%;
-        top: 40%;
-        transform: translate(-50%, -40%);
-        animation: none;
+        top: 30%;
+        transform: translate(-50%, -30%);
+        animation: slide-in-left 1.5s;
     }
 
     #titre2 {
         left: 50%;
-        top: 60%;
-        transform: translate(-50%, -60%);
-        animation: none;
+        top: 65%;
+        transform: translate(-50%, -70%);
+        animation: slide-in-right 1.5s;
     }
 
     /* 1ERE CONNEXION */
-    #premiere_connexion {
+    #premiere_connexion_une, #premiere_connexion_deux  {
         visibility: hidden;
     }
 
-    #encart_premiere_connexion {
+    .encart_premiere_connexion {
         background-color: white;
         text-align: center;
         font-family: "Mediametrie", sans-serif;
     }
 
-    #bouton_premiere_connexion {
+    .bouton_premiere_connexion {
         position: absolute;
         left: 50%;
-        top: 90%;
-        transform: translate(-50%, -90%);
+        top: 95%;
+        transform: translate(-50%, -95%);
         background-color: #e65f28;
-        font-size: 3vh;
+        font-size: 2.75vh;
         font-weight: bold;
         color: white;
         border: none;
-        width: 30vw;
-        padding-top: 1vh;
-        padding-bottom: 1vh;
+        width: 20vw;
+        padding-top: 0.75vh;
+        padding-bottom: 0.75vh;
         text-decoration: none;
         display: inline-block;
+        cursor: grab;
     }
 
     #lot_cadeaux {
@@ -128,12 +129,7 @@
         height: auto;
     }
 
-    #texte_premiere_connexion_1 {
-        padding: 2vh;
-        font-size: 2vh;
-    }
-
-    #texte_premiere_connexion_2 {
+    .texte_premiere_connexion {
         padding: 2vh;
         font-size: 2vh;
     }
@@ -158,6 +154,7 @@
         left: 3vw;
         width: 7vh;
         height: auto;
+        cursor: grab;
     }
 
     #picto_info {
@@ -166,6 +163,16 @@
         right: 3vw;
         width: 7vh;
         height: auto;
+        cursor: grab;
+    }
+
+    #picto_son {
+        position: absolute;
+        bottom: 2vh;
+        left: 3vw;
+        width: 7vh;
+        height: auto;
+        cursor: grab;
     }
 
     #avatar {
@@ -201,6 +208,7 @@
     #picto_point {
         width: 4vh;
         height: auto;
+        cursor: grab;
     }
 
     #bouton_jouer {
@@ -212,6 +220,7 @@
         top: 80%;
         transform: translate(-50%, -80%);
         width: 30vw;
+        cursor: grab;
     }
 
     #bouton_classement {
@@ -223,6 +232,7 @@
         top: 90%;
         transform: translate(-50%, -90%);
         width: 30vw;
+        cursor: grab;
     }
 
     .boutons_accueil {
@@ -234,6 +244,96 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
+        cursor: grab;
+    }
+
+    /* DEJA JOUE */
+    #deja_joué {
+        visibility: visible;
+        width: 40vw;
+        height: 35vh;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #texte_déjà_joué {
+        font-weight: bold;
+        text-align: center;
+        font-size: 2.75vh;
+    }
+
+    #img_déjà_joué {
+        height: 15vh;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    /* POP UP POINTS */
+    #popup_points {
+        visibility: hidden;
+        width: 40vw;
+        height: 35vh;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .popup_croix {
+        left: 95%;
+        transform: translateX(-95%);
+        position: relative;
+        font-weight: bold;
+        font-size: 3vh;
+        color: #FFD700;
+        cursor: grab;
+    }
+
+    #popup_points_texte {
+        text-align: center;
+        color: #14A8C6;
+        font-size: 2.5vh;
+        margin: 1vh 2vh;
+    }
+
+    #input_points {
+        border-radius: 0;
+        border: none;
+        background-color: #efefef;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30vw;
+        font-size: 2.5vh;
+    }
+
+    #bouton_popup_points {
+        border-radius: 0;
+        background-color: #629d00;
+        color: white;
+        border: none;
+        padding: 0 4vw;
+        font-size: 2.5vh;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 3vh;
+        cursor: grab;
+    }
+
+    #img_popup_points {
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        height: 3vh;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     /* INFORMATIONS */
@@ -249,6 +349,8 @@
         left: 3vw;
         width: 7vh;
         height: auto;
+        cursor: grab;
+        z-index: 9999;
     }
 
     #texte_informations_1, #texte_informations_2, #texte_informations_3, #texte_informations_4 {
@@ -263,11 +365,21 @@
         color: #FFEF99;
         text-decoration: underline;
         font-weight: bold;
-        font-size: 2.75vh;
+        font-size: 1.75vh;
     }
 
     #encart_informations {
         background-color: #14A8C6;
+    }
+
+    #titre_règles {
+        color: white;
+        font-weight: bold;
+        font-size: 2.35vh;
+    }
+
+    #exemple_points_informations {
+        height: 6vh;
     }
 
     /* CLASSEMENT */
@@ -289,6 +401,8 @@
         left: 3vw;
         width: 7vh;
         height: auto;
+        cursor: grab;
+        z-index: 9999;
     }
 
     #encart_classement {
@@ -347,13 +461,21 @@
         visibility: hidden;
     }
 
+    #titre_cadeaux {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        font-size: 2.5vh;
+    }
+
     #picto_retour_cadeaux {
         position: absolute;
         top: 2vh;
         left: 3vw;
         width: 7vh;
         height: auto;
-        z-index: 1;
+        z-index: 9999;
+        cursor: grab;
     }
 
     #encart_cadeaux {
@@ -420,6 +542,7 @@
         border-radius: 0;
         background-color: #E65F28;
         padding: 1vh 7vh;
+        cursor: grab;
     }
 
     .dot_regle {
@@ -514,6 +637,7 @@
         transform: translate(-50%, -50%);
         color: #FF2144;
         z-index: 99999;
+        animation: zoom 1s;
     }
 
     #reponse_bonne {
@@ -527,6 +651,7 @@
         transform: translate(-50%, -50%);
         color: #629d00;
         z-index: 99999;
+        animation: zoom 1s;
     }
 
     .progress {
@@ -556,7 +681,7 @@
         top: 50%;
         transform: translate(-50%, -50%);
         background-color: white;
-
+        text-align: center;
     }
 
     .swiper-slide {
@@ -571,12 +696,22 @@
 
     #question {
         position: absolute;
-        top: 30%;
+        top: 35%;
+    }
+
+    #info_question {
+        font-weight: bold;
+        font-size: 2.5vh;
+        text-decoration: underline;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -20%);
     }
     
     #positionnement {
         position: absolute;
-        bottom: 20%;
+        bottom: 22%;
         left: 50%;
         transform: translate(-50%, -20%);
         z-index: 9999;
@@ -606,14 +741,14 @@
 
     .pouce_gauche {
         float: left;
-        height: 9vh;
-        margin-left: 12vw;
+        height: 12vh;
+        margin-left: 8vw;
     }
 
     .pouce_droit {
         float: right;
-        height: 9vh;
-        margin-right: 12vw;
+        height: 12vh;
+        margin-right: 8vw;
     }
 
     #fin_jeu {
