@@ -1,6 +1,7 @@
 setTimeout(affichePremiereConnexionUne, 3000);
 const son_fond = new Audio('son/plage.mp3');
 son_fond.loop = true;
+affichePopupDejaJoue();
 
 // Affichage la page d'introduction 1
 function affichePremiereConnexionUne() {

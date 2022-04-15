@@ -52,8 +52,8 @@ let timer;
 // Affichage de la question sur la carte
 const question = document.getElementById("question");
 const info_question = document.getElementById("info_question");
-info_question.innerHTML= themes[0] + " - " + points[0] + "pts";
-question.innerHTML= questions[0];
+info_question.innerHTML = themes[0] + " - " + points[0] + "pts";
+question.innerHTML = questions[0];
 
 // INITIALISATION DU SWIPER
 const swiper = new Swiper(".mySwiper", {
@@ -68,34 +68,34 @@ const swiper = new Swiper(".mySwiper", {
 runTimer();
 
 // PASSAGE A LA QUESTION SUIVANTE
-function questionSuivante(){
+function questionSuivante() {
     currentQuestion++;
-    if(currentQuestion >= totalQuestion){
+    if (currentQuestion >= totalQuestion) {
         affichageFinJeu();
     } else {
-        info_question.innerHTML= themes[currentQuestion] + " - " + points[currentQuestion] + "pts";
-        question.innerHTML= questions[currentQuestion];
-        document.getElementById("dot"+currentQuestion).classList.add("active");
+        info_question.innerHTML = themes[currentQuestion] + " - " + points[currentQuestion] + "pts";
+        question.innerHTML = questions[currentQuestion];
+        document.getElementById("dot" + currentQuestion).classList.add("active");
     }
 }
 
 // VERIFICATION DE LA REPONSE
-function verificationReponse(choix){
-    if(choix === false){
-        if(currentQuestion < totalQuestion){
-            if(reponses[currentQuestion] === false){
+function verificationReponse(choix) {
+    if (choix === false) {
+        if (currentQuestion < totalQuestion) {
+            if (reponses[currentQuestion] === false) {
                 reponseBonneAffichage();
                 pointsTotal += points[currentQuestion];
-            } else if(reponses[currentQuestion] === true){
+            } else if (reponses[currentQuestion] === true) {
                 reponseFausseAffichage();
             }
         }
-    } else if(choix === true){
-        if(currentQuestion < totalQuestion){
-            if(reponses[currentQuestion] === true){
+    } else if (choix === true) {
+        if (currentQuestion < totalQuestion) {
+            if (reponses[currentQuestion] === true) {
                 reponseBonneAffichage();
                 pointsTotal += points[currentQuestion];
-            } else if(reponses[currentQuestion] === false){
+            } else if (reponses[currentQuestion] === false) {
                 reponseFausseAffichage();
             }
         }
@@ -103,7 +103,7 @@ function verificationReponse(choix){
 }
 
 // EVENT SUR LE DÉCLENCHEMENT D'UN CLIQUE SUR LES BOUTONS
-function eventClique(choix){
+function eventClique(choix) {
     stopTimer();
     clique = true;
     console.log("clique");
@@ -111,7 +111,7 @@ function eventClique(choix){
 }
 
 // ARRET DU TIMER
-function stopTimer(){
+function stopTimer() {
     clearTimeout(timer);
     document.getElementById("progress_bar").style.animation = 'none';
     document.getElementById("progress_bar").offsetHeight;
@@ -120,12 +120,12 @@ function stopTimer(){
 }
 
 // DEBUT DU TIMER
-function runTimer(){
+function runTimer() {
     document.getElementById("progress_bar").style.animation = 'none';
     document.getElementById("progress_bar").offsetHeight;
     document.getElementById("progress_bar").style.animation = null;
     document.getElementById("progress_bar").style.animation = "progress 6s linear";
-    timer = window.setTimeout(function (){
+    timer = window.setTimeout(function () {
         reponseFausseAffichage();
     }, 6000);
 }
