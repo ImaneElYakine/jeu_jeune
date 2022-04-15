@@ -513,17 +513,11 @@
 
     #encart_regles_jeu_1 {
         background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     #encart_regles_jeu_2 {
         background-color: white;
         visibility: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     #encart_regles_jeu_3 {
