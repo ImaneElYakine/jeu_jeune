@@ -153,7 +153,7 @@ function reponseBonneAffichage(){
 }
 
 // Affichage lors de la fin du jeu
-const affichageFinJeu = function affichageFinJeu() {
+function affichageFinJeu() {
     setTimeout(function () {
             window.location.replace('./accueil.html');
         }, 1500);
