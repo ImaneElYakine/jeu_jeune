@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Jeu d'été 2022</title>
-  <link href="img/favicon_mediametrie.png" rel="icon">
-  <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
-  <link rel="stylesheet" href="style/portrait.css">
-  <link rel="stylesheet" href="style/animations.css">
-  <link rel="stylesheet" href="style/paysage.css">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Quiz de l'été</title>
+    <link href="img/favicon_mediametrie.png" rel="icon">
+    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+    <link href="style/portrait.css" rel="stylesheet">
+    <link href="style/animations.css" rel="stylesheet">
+    <link href="style/paysage.css" rel="stylesheet">
 </head>
 <body>
 
 <!-- Fond immobile -->
 <div id="background">
-  <img id="corner1" src="img/background_corner.svg">
-  <img id="corner2" src="img/background_corner.svg">
-  <img id="coquillage" src="img/coquillage.svg">
-  <img id="parasol" src="img/parasol.svg">
-  <img id="serviette" src="img/serviette.svg">
-  <img id="pas1" src="img/pas.svg">
-  <img id="pas2" src="img/pas.svg">
+    <img id="corner1" src="img/background_corner.svg">
+    <img id="corner2" src="img/background_corner.svg">
+    <img id="coquillage" src="img/coquillage.svg">
+    <img id="parasol" src="img/parasol.svg">
+    <img id="serviette" src="img/serviette.svg">
+    <img id="pas1" src="img/pas.svg">
+    <img id="pas2" src="img/pas.svg">
 </div>
 
 <!-- Animation réponses -->
@@ -28,32 +28,34 @@
 <div id="reponse_bonne">BIEN JOUÉ</div>
 
 <!-- Bar de progrès -->
-<div id="progress" class="progress">
-  <div id="progress_bar" class="bar"></div>
+<div class="progress" id="progress">
+    <div class="bar" id="progress_bar"></div>
 </div>
 
 <!-- Encart question -->
-<div id="cartes" class="swiper mySwiper">
-  <div class="swiper-wrapper">
-    <div id="info_question"></div>
-    <div id="question" class="swiper-slide"></div>
-  </div>
+<div class="swiper mySwiper" id="cartes">
+    <div class="swiper-wrapper">
+        <div id="info_question"></div>
+        <div class="swiper-slide" id="question"></div>
+    </div>
 </div>
 
 <!-- Choix -->
 <div id="choix_reponse">
-  <input id="pouce_gauche" class="pouce_gauche"  type="image" src="img/picto_faux.svg" onclick="eventClique(false)" alt="">
-  <input id="pouce_droit" class="pouce_droit"  type="image" src="img/picto_vrai.svg" onclick="eventClique(true)" alt="">
+    <input alt="" class="pouce_gauche" id="pouce_gauche" onclick="eventClique(false)" src="img/picto_faux.svg"
+           type="image">
+    <input alt="" class="pouce_droit" id="pouce_droit" onclick="eventClique(true)" src="img/picto_vrai.svg"
+           type="image">
 </div>
 
 
 <!-- Position -->
 <div id="positionnement">
-  <div id="dot0" class="dot active"></div>
-  <div id="dot1" class="dot"></div>
-  <div id="dot2" class="dot"></div>
-  <div id="dot3" class="dot"></div>
-  <div id="dot4" class="dot"></div>
+    <div class="dot active" id="dot0"></div>
+    <div class="dot" id="dot1"></div>
+    <div class="dot" id="dot2"></div>
+    <div class="dot" id="dot3"></div>
+    <div class="dot" id="dot4"></div>
 </div>
 
 <!-- JS -->

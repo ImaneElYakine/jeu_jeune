@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Jeu d'été 2022</title>
+    <title>Quiz de l'été</title>
     <link href="img/favicon_mediametrie.png" rel="icon">
     <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
-    <link rel="stylesheet" href="style/portrait.css">
-    <link rel="stylesheet" href="style/paysage.css">
+    <link href="style/portrait.css" rel="stylesheet">
+    <link href="style/paysage.css" rel="stylesheet">
 </head>
 <body>
 
@@ -34,7 +34,7 @@
         <span id="pseudo">Surfeur Zen 3</span>
         <div id="points">
             <span id="nombre_point">0</span>
-            <img onclick="affichePopupPoints()" id="picto_point" src="img/picto_point.svg"/>
+            <img id="picto_point" onclick="affichePopupPoints()" src="img/picto_point.svg"/>
         </div>
     </div>
     <button class="boutons_accueil" id="bouton_jouer" onclick="window.location.href='règles.html'">Jouer</button>
@@ -44,19 +44,19 @@
 
 <!-- Déjà joué -->
 <div id="deja_joué">
-    <span onclick="fermeturePopup()" class="popup_croix">x</span>
+    <span class="popup_croix" onclick="fermeturePopup()">x</span>
     <p id="texte_déjà_joué">Tu as déjà joué aujourd'hui, reviens demain !</p>
     <img id="img_déjà_joué" src="img/déjà_joué.png">
 </div>
 
 <!-- Popup points -->
 <div id="popup_points">
-    <span onclick="fermeturePopup()" class="popup_croix">x</span>
+    <span class="popup_croix" onclick="fermeturePopup()">x</span>
     <p id="popup_points_texte">Rentre le code reçu dans ton Infopanel de juin et gagne <b>5 points</b> !</p>
-    <img src="img/points_popup.svg" id="img_popup_points">
+    <img id="img_popup_points" src="img/points_popup.svg">
     <form>
-        <input type="text" id="input_points" placeholder="Ton code">
-        <input type="submit" value="Valider" id="bouton_popup_points">
+        <input id="input_points" placeholder="Ton code" type="text">
+        <input id="bouton_popup_points" type="submit" value="Valider">
     </form>
 </div>
 
@@ -65,14 +65,11 @@
     <img id="picto_retour_informations" onclick="afficheAccueil()" src="img/picto_retour.svg"/>
     <div class="encart" id="encart_informations">
         <p id="titre_règles">Règles du quiz</p>
-        <p id="texte_informations_1">Chaque question possède une thématique, un niveau et un nombre de points. Plus tu
-            trouves de bonnes réponses, plus tu gagnes de points ! </p>
-        <p id="texte_informations_2">Attention ! Si tu reviens en arrière ou quittes la partie en cours de jeu, tu ne
-            gagneras aucun point pour cette journée.</p>
+        <p id="texte_informations_1">Chaque question possède un niveau & un nombre de points. Plus tu trouves de bonnes réponses, plus tu gagnes de points ! </p>
+        <p id="texte_informations_2"><b>Attention !</b> Si tu reviens en arrière ou quittes la partie en cours de jeu, tu ne gagneras aucun point pour cette journée !</p>
         <img id="exemple_points_informations" src="img/exemples_points.svg"/>
-        <p id="texte_informations_3">A la fin de chaque partie, découvre ton score et le classement général. </p>
-        <p id="texte_informations_4">Bonus : <br>Si tu te connectes quotidiennement au jeu, tu gagnes chaque jour 1
-            point bonus de participation !</p>
+        <p id="texte_informations_3">Découvre ton score et le classement général à la fin de chaque partie.</p>
+        <p id="texte_informations_4"><b>Bonus : tu gagnes un point par jour de connexion !</b></p>
         <p id="texte_informations_5">Voir les conditions de participation</p>
     </div>
 </div>
@@ -83,45 +80,66 @@
     <div class="encart" id="encart_classement">
         <p id="titre_classement">Classement</p>
 
-        <table style="border-collapse: collapse; " id="top10">
+        <table id="top10" style="border-collapse: collapse; ">
             <tbody>
-            <tr id="attribut_classement" class="bottom_line">
-                <td>Rang</td><td>Nom</td><td><img src="img/picto_point.svg"></td>
+            <tr class="bottom_line" id="attribut_classement">
+                <td>Rang</td>
+                <td>Nom</td>
+                <td><img src="img/picto_point.svg"></td>
             </tr>
-            <tr id="top1" class="bottom_line">
-                <td>1</td><td>Joueur Zen 3</td><td>745</td>
+            <tr class="bottom_line" id="top1">
+                <td>1</td>
+                <td>Joueur Zen 3</td>
+                <td>745</td>
             </tr>
-            <tr id="top2" class="bottom_line">
-                <td>2</td><td>Joueur Zen 3</td><td>745</td>
+            <tr class="bottom_line" id="top2">
+                <td>2</td>
+                <td>Joueur Zen 3</td>
+                <td>745</td>
             </tr>
-            <tr id="top3" class="bottom_line">
-                <td>3</td><td>Joueur Zen 3</td><td>745</td>
+            <tr class="bottom_line" id="top3">
+                <td>3</td>
+                <td>Joueur Zen 3</td>
+                <td>745</td>
             </tr>
-            <tr id="top4" class="bottom_line">
-                <td>4</td><td>Joueur Zen 3</td><td>745</td>
+            <tr class="bottom_line" id="top4">
+                <td>4</td>
+                <td>Joueur Zen 3</td>
+                <td>745</td>
             </tr>
-            <tr id="top5" class="bottom_line">
-                <td>5</td><td>Joueur Zen 3</td><td>745</td>
+            <tr class="bottom_line" id="top5">
+                <td>5</td>
+                <td>Joueur Zen 3</td>
+                <td>745</td>
             </tr>
-            <tr id="top6" class="bottom_line">
-                <td>6</td><td>Joueur Zen 3</td><td>745</td>
+            <tr class="bottom_line" id="top6">
+                <td>6</td>
+                <td>Joueur Zen 3</td>
+                <td>745</td>
             </tr>
-            <tr id="top7" class="bottom_line">
-                <td>7</td><td>Joueur Zen 3</td><td>745</td>
+            <tr class="bottom_line" id="top7">
+                <td>7</td>
+                <td>Joueur Zen 3</td>
+                <td>745</td>
             </tr>
-            <tr id="top8" class="bottom_line">
-                <td>8</td><td>Joueur Zen 3</td><td>745</td>
+            <tr class="bottom_line" id="top8">
+                <td>8</td>
+                <td>Joueur Zen 3</td>
+                <td>745</td>
             </tr>
             </tbody>
             <span id="ton_rang">Ton rang</span>
-            <table style="border-collapse: collapse;" id="top_joueur">
+            <table id="top_joueur" style="border-collapse: collapse;">
                 <tbody>
                 <tr id="top_joueur_rang">
-                    <td>180</td><td>Joueur Zen 3</td><td>745</td>
+                    <td>180</td>
+                    <td>Joueur Zen 3</td>
+                    <td>745</td>
                 </tr>
                 </tbody>
             </table>
-        </table></li>
+        </table>
+        </li>
     </div>
 </div>
 
