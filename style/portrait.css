@@ -251,7 +251,7 @@
 
     /* DEJA JOUE */
     #deja_joué {
-        visibility: visible;
+        visibility: hidden;
         width: 60vw;
         height: 40vh;
         background-color: white;
@@ -513,16 +513,25 @@
 
     #encart_regles_jeu_1 {
         background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #encart_regles_jeu_2 {
         background-color: white;
         visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #encart_regles_jeu_3 {
         background-color: white;
         visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .fleche_suivante {
@@ -634,7 +643,7 @@
     #compte_rebours_go {
         visibility: hidden;
         color: #fff;
-        font-size: 14vh;
+        font-size: 10vh;
     }
 
     /* JEU */

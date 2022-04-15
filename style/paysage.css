@@ -96,7 +96,7 @@
     }
 
     /* 1ERE CONNEXION */
-    #premiere_connexion_une, #premiere_connexion_deux  {
+    #premiere_connexion_une, #premiere_connexion_deux {
         visibility: hidden;
     }
 
@@ -249,7 +249,7 @@
 
     /* DEJA JOUE */
     #deja_joué {
-        visibility: visible;
+        visibility: hidden;
         width: 40vw;
         height: 35vh;
         background-color: white;
@@ -512,6 +512,10 @@
     #encart_regles_jeu_3 {
         background-color: white;
         visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
 
     .fleche_suivante {
@@ -706,7 +710,7 @@
         margin-top: 5vh;
 
     }
-    
+
     #positionnement {
         position: absolute;
         bottom: 22%;
