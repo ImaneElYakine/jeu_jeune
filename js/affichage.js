@@ -1,7 +1,7 @@
 setTimeout(affichePremiereConnexionUne, 3000);
 const son_fond = new Audio('son/plage.mp3');
 son_fond.loop = true;
-affichePopupDejaJoue();
+//affichePopupDejaJoue();
 
 // Affichage la page d'introduction 1
 function affichePremiereConnexionUne() {
@@ -108,10 +108,12 @@ function afficheJeu(){
     window.location.href = 'quiz.html';
 }
 
-// Affichage de la réponse à la question
+// Affichage de la réponse à la question, ici fausse
 function reponseFausseAffichage(){
     const son_faux = new Audio("son/faux.mp3");
     son_faux.play();
+    son_jeu.pause();
+    son_jeu.currentTime = 0;
     document.getElementById("reponse_fausse").style.animation = 'none';
     document.getElementById("reponse_fausse").offsetHeight;
     document.getElementById("reponse_fausse").style.animation = null;
@@ -131,9 +133,12 @@ function reponseFausseAffichage(){
     setTimeout(runTimer, 1500);
 }
 
+// Affichage de la réponse à la question, ici bonne
 function reponseBonneAffichage(){
     const son_correct = new Audio("son/correct.mp3");
     son_correct.play();
+    son_jeu.pause();
+    son_jeu.currentTime = 0;
     document.getElementById("reponse_bonne").style.animation = 'none';
     document.getElementById("reponse_bonne").offsetHeight;
     document.getElementById("reponse_bonne").style.animation = null;

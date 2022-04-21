@@ -49,6 +49,10 @@ let clique = false;
 // Le compte à rebours
 let timer;
 
+// Son du quiz
+const son_jeu = new Audio('son/quiz.mp3')
+
+
 // Affichage de la question sur la carte
 const question = document.getElementById("question");
 const info_question = document.getElementById("info_question");
@@ -66,6 +70,7 @@ const swiper = new Swiper(".mySwiper", {
 });
 
 runTimer();
+son_jeu.play();
 
 // PASSAGE A LA QUESTION SUIVANTE
 function questionSuivante() {
@@ -75,7 +80,7 @@ function questionSuivante() {
     } else {
         info_question.innerHTML = themes[currentQuestion] + " - " + points[currentQuestion] + "pts";
         question.innerHTML = questions[currentQuestion];
-        document.getElementById("dot" + currentQuestion).classList.add("active");
+        document.getElementById("dot" + (currentQuestion-1)).classList.add("active");
     }
 }
 
@@ -121,6 +126,7 @@ function stopTimer() {
 
 // DEBUT DU TIMER
 function runTimer() {
+    son_jeu.play();
     document.getElementById("progress_bar").style.animation = 'none';
     document.getElementById("progress_bar").offsetHeight;
     document.getElementById("progress_bar").style.animation = null;
