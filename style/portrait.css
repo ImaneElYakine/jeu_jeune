@@ -17,10 +17,6 @@
         height: 80vh;
     }
 
-    .centrer {
-
-    }
-
     /* FOND IMMOBILE */
     #corner1 {
         height: 70vh;
@@ -511,11 +507,26 @@
 
     #encart_regles_jeu_1 {
         background-color: white;
+        vertical-align: center;
+    }
+
+    #info_regle_1 {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     #encart_regles_jeu_2 {
         background-color: white;
         visibility: hidden;
+    }
+
+    #info_regle_2 {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     #encart_regles_jeu_3 {
