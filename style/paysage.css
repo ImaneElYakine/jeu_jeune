@@ -502,18 +502,19 @@
 
     #encart_regles_jeu_1 {
         background-color: white;
-        padding-top: 10vh;
+    }
+
+    #info_regle_1 {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     #encart_regles_jeu_2 {
         background-color: white;
         visibility: hidden;
 
-    }
-
-    #encart_regles_jeu_3 {
-        background-color: white;
-        visibility: hidden;
     }
 
     #info_regle_2 {
@@ -523,6 +524,14 @@
         transform: translate(-50%, -50%);
     }
 
+    #encart_regles_jeu_3 {
+        background-color: white;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .fleche_suivante {
         position: absolute;
         right: 5%;
