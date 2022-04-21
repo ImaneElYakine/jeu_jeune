@@ -527,11 +527,16 @@
     #encart_regles_jeu_3 {
         background-color: white;
         visibility: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
     }
-    
+
+    #info_regle_3 {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     .fleche_suivante {
         position: absolute;
         right: 5%;
