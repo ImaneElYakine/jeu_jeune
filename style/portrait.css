@@ -369,11 +369,17 @@
 
     }
 
-    #texte_informations_5, #texte_informations_6 {
+    #texte_informations_5 {
         color: #FFEF99;
         text-decoration: underline;
         font-weight: bold;
         font-size: 1.75vh;
+    }
+
+    #texte_informations_6 {
+        color: #FFEF99;
+        font-weight: bold;
+        font-size: 1.6vh;
     }
 
     .encart {
