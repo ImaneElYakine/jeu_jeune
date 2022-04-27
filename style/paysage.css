@@ -361,7 +361,7 @@
 
     }
 
-    #texte_informations_5 {
+    #texte_informations_5, #texte_informations_6 {
         color: #FFEF99;
         text-decoration: underline;
         font-weight: bold;
