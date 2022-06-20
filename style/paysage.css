@@ -384,7 +384,7 @@
 
     /* CLASSEMENT */
     #classement {
-        visibility: hidden;
+        display: none;
         font-family: "Mediametrie", sans-serif;
     }
 
@@ -407,27 +407,31 @@
 
     #encart_classement {
         background-color: white;
+        width: 50vw;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5vh;
     }
 
     #top10 {
-        position: fixed;
+        position: relative;
         list-style-type: none;
-        bottom: 18vh;
+        width: 50vw;
         font-size: 2vh;
         left: 50%;
         transform: translateX(-50%);
-
     }
 
     #top_joueur {
-        position: fixed;
+        position: relative;
         list-style-type: none;
         font-size: 2vh;
         font-weight: bold;
         background-color: #D7F5FB;
-        bottom: 5vh;
         left: 50%;
         transform: translateX(-50%);
+        width: 50vw;
     }
 
     #attribut_classement {
@@ -435,7 +439,7 @@
     }
 
     #top10 td {
-        padding: 0vh 5vw;
+        padding: 2vh 5vw;
     }
 
     .bottom_line {
@@ -443,17 +447,14 @@
     }
 
     #top_joueur td {
-        padding: 0vh 5vw;
+        padding: 2vh 5vw;
     }
 
     #ton_rang {
         font-size: 2vh;
         font-weight: bold;
         color: #14A8C6;
-        position: absolute;
-        bottom: 12vh;
-        margin-left: 7vw;
-        z-index: 1;
+        background-color: white;
     }
 
     /* CADEAUX */
