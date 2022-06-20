@@ -48,7 +48,7 @@ function fermeturePopup(){
 // Affichage du classement
 function afficheClassement(){
     document.getElementById("accueil").style.visibility = "hidden";
-    document.getElementById("classement").style.visibility = "visible";
+    document.getElementById("classement").style.display = "block";
 }
 
 // Affichage de la page des cadeaux
