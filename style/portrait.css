@@ -17,10 +17,6 @@
         height: 80vh;
     }
 
-    .centrer {
-
-    }
-
     /* FOND IMMOBILE */
     #corner1 {
         height: 70vh;
@@ -380,15 +376,6 @@
         font-size: 1.75vh;
     }
 
-    .encart {
-        position: absolute;
-        left: 50%;
-        top: 60%;
-        transform: translate(-50%, -60%);
-        width: 80vw;
-        height: 80vh;
-    }
-
     #encart_informations {
         background-color: #14A8C6;
     }
@@ -469,7 +456,7 @@
 
     /* CADEAUX */
     #cadeaux {
-        visibility: hidden;
+        display: none;
     }
 
     #titre_cadeaux {
@@ -492,18 +479,29 @@
     #encart_cadeaux {
         position: absolute;
         background-color: #14A8C6;
-        width: 100vw;
-        height: 100vh;
     }
 
     #liste_cadeaux {
         font-size: 2vh;
         list-style-type: none;
+        background-color: #14A8C6;
     }
 
     .photo_cadeau {
         height: auto;
         width: 15vh;
+    }
+
+    .nom_cadeau {
+        color: #fff7cc;
+        font-size: 2vh;
+        padding-top: -20vh;
+    }
+
+    .rang_cadeau {
+        font-weight: bold;
+        color: #fff7cc;
+        font-size: 2.15vh;
     }
 
     /* REGLES JEU */
