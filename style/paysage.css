@@ -423,15 +423,8 @@
         transform: translateX(-50%);
     }
 
-    #top_joueur {
-        position: relative;
-        list-style-type: none;
-        font-size: 2vh;
-        font-weight: bold;
-        background-color: #D7F5FB;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50vw;
+    #top_joueur_rang td {
+        background-color: #D7F5FB!important;
     }
 
     #attribut_classement {

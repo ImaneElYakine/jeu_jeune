@@ -410,6 +410,7 @@
         left: 50%;
         transform: translateX(-50%);
         margin-top: 5vh;
+        padding: 0vh 4vw;
     }
 
     #top10 {
@@ -422,15 +423,8 @@
 
     }
 
-    #top_joueur {
-        position: relative;
-        list-style-type: none;
-        font-size: 2vh;
-        font-weight: bold;
-        background-color: #D7F5FB;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 70vw;
+    #top_joueur_rang td {
+        background-color: #D7F5FB!important;
     }
 
     #attribut_classement {
@@ -439,14 +433,13 @@
 
     #top10 td {
         padding: 1vh 4vw;
-    }
-
-    .bottom_line {
         border-bottom: solid 1px #efefef;
+        background-color: white;
     }
 
     #top_joueur td {
         padding: 1vh 4vw;
+        border-bottom: solid 1px #efefef;
     }
 
     #ton_rang {
