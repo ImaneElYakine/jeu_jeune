@@ -368,12 +368,6 @@
         font-size: 1.75vh;
     }
 
-    #texte_informations_6 {
-        color: #FFEF99;
-        font-weight: bold;
-        font-size: 1.6vh;
-    }
-
     #encart_informations {
         background-color: #14A8C6;
     }
@@ -510,37 +504,18 @@
         background-color: white;
     }
 
-    #info_regle_1 {
-        position: relative;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-
     #encart_regles_jeu_2 {
         background-color: white;
         visibility: hidden;
-
-    }
-
-    #info_regle_2 {
-        position: relative;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
     }
 
     #encart_regles_jeu_3 {
         background-color: white;
         visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    }
-
-    #info_regle_3 {
-        position: relative;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
     }
 
     .fleche_suivante {

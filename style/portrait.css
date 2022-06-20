@@ -17,6 +17,10 @@
         height: 80vh;
     }
 
+    .centrer {
+
+    }
+
     /* FOND IMMOBILE */
     #corner1 {
         height: 70vh;
@@ -376,12 +380,6 @@
         font-size: 1.75vh;
     }
 
-    #texte_informations_6 {
-        color: #FFEF99;
-        font-weight: bold;
-        font-size: 1.6vh;
-    }
-
     .encart {
         position: absolute;
         left: 50%;
@@ -494,6 +492,8 @@
     #encart_cadeaux {
         position: absolute;
         background-color: #14A8C6;
+        width: 100vw;
+        height: 100vh;
     }
 
     #liste_cadeaux {
@@ -513,38 +513,25 @@
 
     #encart_regles_jeu_1 {
         background-color: white;
-        vertical-align: center;
-    }
-
-    #info_regle_1 {
-        position: relative;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #encart_regles_jeu_2 {
         background-color: white;
         visibility: hidden;
-    }
-
-    #info_regle_2 {
-        position: relative;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #encart_regles_jeu_3 {
         background-color: white;
         visibility: hidden;
-    }
-
-    #info_regle_3 {
-        position: relative;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .fleche_suivante {
